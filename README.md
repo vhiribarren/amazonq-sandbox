@@ -29,7 +29,7 @@ uv sync
 Run the hello world generator:
 
 ```bash
-python hello_world_generator.py
+python hello_world.py
 ```
 
 Or using uv:

@@ -15,4 +15,4 @@ build-backend = "hatchling.build"
 dev-dependencies = []
 
 [project.scripts]
-hello-world-generator = "hello_world_generator:main"
+hello-world-generator = "hello_world:main"
