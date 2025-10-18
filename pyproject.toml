@@ -1,0 +1,18 @@
+[project]
+name = "hello-world-generator"
+version = "0.1.0"
+description = "A hello world generator with fibonacci and random number comparison"
+authors = [{name = "Developer", email = "dev@example.com"}]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = []
+
+[project.scripts]
+hello-world-generator = "hello_world_generator:main"
