@@ -1,0 +1,48 @@
+cabal-version: 2.2
+name: hello-world-generator
+version: 0.1.0
+synopsis: A hello world generator with fibonacci and random number comparison
+description: 
+    A Haskell project that generates "hello world" in Japanese (こんにちは世界) 
+    based on fibonacci sequence calculation and random number comparison.
+    .
+    Features:
+    * Generates random fibonacci input and calculates the fibonacci result
+    * Compares the fibonacci result with another random number  
+    * Displays "hello world" in Japanese if the fibonacci result is less than the random number
+    * Uses memoization for efficient fibonacci calculation
+    * Follows functional programming principles
+    * Everything contained in a single Haskell file
+
+homepage: https://github.com/example/hello-world-generator-haskell
+bug-reports: https://github.com/example/hello-world-generator-haskell/issues
+license: MIT
+license-file: LICENSE
+author: Developer
+maintainer: dev@example.com
+copyright: 2024 Developer
+category: Console
+build-type: Simple
+extra-source-files: README.md
+
+executable hello-world-generator
+    main-is: Main.hs
+    
+    build-depends:
+        base >= 4.14 && < 5,
+        random >= 1.2 && < 1.3,
+        memoize >= 1.1 && < 1.2
+    
+    default-language: Haskell2010
+    
+    ghc-options: 
+        -Wall 
+        -Wcompat 
+        -Widentities 
+        -Wincomplete-record-updates 
+        -Wincomplete-uni-patterns 
+        -Wmissing-export-lists 
+        -Wmissing-home-modules 
+        -Wpartial-fields 
+        -Wredundant-constraints
+        -O2
