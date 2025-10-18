@@ -1,0 +1,3 @@
+- in all files created in the `firewall` directory, the SID identifiers must be unique
+- Python code must follow PEP8
+- each files must have the "Vincent Hiribarren" copyright notice
