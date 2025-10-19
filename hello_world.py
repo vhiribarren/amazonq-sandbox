@@ -4,6 +4,8 @@ Hello World Generator
 
 A project that generates "hello world" in Japanese based on fibonacci
 and random number comparison.
+
+BOnuour!
 """
 
 import random
@@ -39,6 +41,8 @@ generate_fibonacci_input: Callable[[], int] = lambda: random.randint(1, 30)
 # Generate random number for comparison
 generate_comparison_number: Callable[[], int] = lambda: random.randint(1, 1000)
 
+def MyTest():
+    pass
 
 # ============================================================================
 # hello world
