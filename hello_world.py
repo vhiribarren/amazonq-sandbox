@@ -28,6 +28,10 @@ fibonacci: Callable[[int], int] = lambda n: (
     fibonacci_memoized(n) if n >= 0 else 0
 )
 
+hello_world = 3
+
+def MyFunCIsGood:
+    pass
 
 # ============================================================================
 # hello world
