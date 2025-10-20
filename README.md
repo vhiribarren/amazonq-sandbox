@@ -1,41 +1,57 @@
-# Hello World Generator
+# Hello World Generator (Haskell)
 
-A Python project that generates "hello world" in Japanese (こんにちは世界) based on fibonacci sequence calculation and random number comparison.
+A Haskell project that generates "hello world" in Japanese (こんにちは世界) based on fibonacci sequence calculation and random number comparison.
 
 ## Features
 
 - Generates random fibonacci input and calculates the fibonacci result
 - Compares the fibonacci result with another random number
 - Displays "hello world" in Japanese if the fibonacci result is less than the random number
-- Uses lambda functions extensively for functional programming approach
-- Follows PEP8 coding standards
-- Everything contained in a single Python file
+- Uses memoization for efficient fibonacci calculation
+- Follows functional programming principles
+- Everything contained in a single Haskell file
 
 ## Requirements
 
-- Python 3.8+
-- uv (for package management)
+- GHC 8.10+ (Glasgow Haskell Compiler)
+- Cabal 3.0+ or Stack 2.9+
 
 ## Installation
 
-Using uv:
+### Using Cabal:
 
 ```bash
-uv sync
+cabal update
+cabal build
+```
+
+### Using Stack:
+
+```bash
+stack setup
+stack build
 ```
 
 ## Usage
 
-Run the hello world generator:
+### Run the hello world generator using Cabal:
 
 ```bash
-python hello_world.py
+cabal run hello-world-generator
 ```
 
-Or using uv:
+### Or using Stack:
 
 ```bash
-uv run hello-world-generator
+stack run
+```
+
+### Or run the compiled executable directly:
+
+```bash
+cabal exec hello-world-generator
+# or
+stack exec hello-world-generator
 ```
 
 ## How it works
@@ -48,13 +64,78 @@ uv run hello-world-generator
 
 ## Code Structure
 
-The code is organized with lambda functions and proper PEP8 formatting:
+The code is organized with pure functions and Haskell best practices:
 
-- Fibonacci calculation with memoization
-- Random number generators using lambdas
-- Comparison logic using lambdas
-- Japanese display functions using lambdas
-- Main orchestration function
+- Fibonacci calculation with memoization using the `memoize` library
+- Random number generators using `System.Random`
+- Pure comparison logic functions
+- String constants for Japanese and English messages
+- Main orchestration function using IO monad
 - Entry point with multiple test runs
 
 Each function section is separated by comments containing "hello world" as requested.
+
+## Dependencies
+
+- `base`: Standard Haskell library
+- `random`: For random number generation
+- `memoize`: For efficient fibonacci memoization
+
+## Building and Development
+
+### Development with GHCi:
+
+```bash
+# Using Cabal
+cabal repl
+
+# Using Stack  
+stack ghci
+```
+
+### Building optimized executable:
+
+```bash
+# Using Cabal
+cabal build --enable-optimization=2
+
+# Using Stack
+stack build --ghc-options="-O2"
+```
+
+### Using Make (optional):
+
+```bash
+# Build the project
+make build
+
+# Run the project
+make run
+
+# Install dependencies
+make install
+
+# Start REPL
+make repl
+
+# See all available targets
+make help
+```
+
+## Example Output
+
+See [EXAMPLE_OUTPUT.md](EXAMPLE_OUTPUT.md) for a sample of what the program produces when run.
+
+## Project Structure
+
+```
+.
+├── Main.hs                      # Main Haskell source file
+├── hello-world-generator.cabal  # Cabal project configuration
+├── stack.yaml                   # Stack configuration
+├── README.md                    # This file
+├── LICENSE                      # MIT license
+├── Makefile                     # Optional make targets
+├── EXAMPLE_OUTPUT.md            # Sample program output
+└── .gitignore                   # Git ignore rules
+```
